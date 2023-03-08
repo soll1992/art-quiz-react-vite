@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.header {
+    width: 100%;
+    height: rem(100);
+    &__navigation {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        font-size: rem(25);
+        &__link {          
+            display: block;
+            color: white;
+            text-decoration: none;
+            &:hover {
+                opacity: 0.8;
+            }
+            &__active {
+                display: block;
+                text-decoration: none;
+                color: $main-color-effects;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        &__logo {
+            margin-left: rem(30);
+            width: rem(166);
+            height: rem(62);
+            background: url('/assets/svg/head-logo.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &__settings {
+            margin-right: rem(30);
+        }
+        &__page_links {
+            display: flex;
+            width: rem(600);
+            justify-content: space-between;
+            margin: 0 auto;
+            @media(max-width: 600px) {
+                justify-content: space-around;
+            }
+            @media(max-width: 350px) {
+                font-size: rem(18);
+            }
+        }
+    }
+}

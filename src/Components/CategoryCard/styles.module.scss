@@ -1,0 +1,46 @@
+@import '../../styles/variables'; 
+@import '../../styles/mixins';
+
+.card {
+    transition: 0.3s;
+    &_link {
+        text-decoration: none;
+    }
+    &__header {
+        display: flex;
+        color: white;
+        &_title {
+            padding: rem(5);
+        }
+        &_score {
+            margin-right: 0;
+            margin-left: auto;
+            padding: rem(5);
+        }
+    }
+    &__body {
+        width: rem(200);
+        height: rem(200);
+        cursor: pointer;
+    }
+    &__footer {
+        display: flex;
+        justify-content: center;
+        &__text {
+            cursor: pointer;
+            color: black;
+            background-color: $main-color-effects;
+            border-radius: 0 0 rem(20) rem(20);
+            text-decoration: none;
+            width: rem(160);
+            text-align: center;
+            line-height: rem(30);
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &:hover {
+        transform: scale(1.1)
+    }
+}

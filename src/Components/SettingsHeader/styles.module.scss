@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.header {
+    padding: rem(30);
+    &_back {
+        background-color: inherit;
+        font-size: rem(20);
+        color: white;
+        padding: rem(10);
+        cursor: pointer;
+        &:hover {
+            color: $main-color-effects;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@import '../../styles/mixins';
+
+.score {
+    &__list {
+        width: rem(1350);
+        height: rem(550);
+        margin: 0 auto;
+        margin-top: rem(100);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        @media(max-width: 900px) {
+            width: percent(1300, 1920);
+        }
+        @media(max-width: 480px) {
+            justify-content: center;
+        }
+    }
+}

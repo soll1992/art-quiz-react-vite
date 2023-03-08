@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+
+.settings_form {
+    width: rem(500);
+    margin: 0 auto;
+    &_mute {
+        margin-top: rem(20);
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &_title {
+        margin-top: rem(80);
+    }
+}

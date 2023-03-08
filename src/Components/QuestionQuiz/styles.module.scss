@@ -1,0 +1,74 @@
+@import '../../styles/variables'; 
+@import '../../styles/mixins';
+
+.quiz {
+    &__main {
+        width: rem(650);
+        margin: 0 auto;
+        margin-top: rem(20);
+        font-size: rem(20);
+        &__question {
+            margin-top: rem(20);
+            &__image {
+                width: rem(400);
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &__answers {
+            width: rem(650);
+            margin: 0 auto;
+            margin-top: rem(20);
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            &_img {
+                width: rem(300);
+                height: rem(300);
+                border-radius: rem(20);
+                cursor: pointer;
+                @media(max-width: 500px) {
+                    margin-bottom: rem(20);
+                }
+            }
+            &_author {
+                width: rem(290);
+                border: rem(1) solid white;
+                font-size: rem(15);
+                padding: rem(20) 0;
+                color: white;
+                border-radius: rem(20);
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    color: $main-color-effects;
+                    border-color: $main-color-effects;
+                }
+                @media(max-width: 500px) {
+                    margin-bottom: rem(10);
+                }
+            }
+            &:global(._pic) {
+                height: rem(650);
+            }
+            &:global(._art) {
+                height: rem(200);
+            }
+            @media(max-width: 500px) {
+                width: rem(550);
+                justify-content: center;
+            }
+            @media(max-width: 364px) {
+                width: rem(450);
+                justify-content: center;
+            }
+        }
+        @media(max-width: 500px) {
+            width: rem(550);
+        }
+        @media(max-width: 364px) {
+            width: rem(450);
+            justify-content: center;
+        }
+    }
+}

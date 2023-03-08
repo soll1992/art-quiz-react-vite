@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button {
+    width: 100%;
+    height: rem(50);
+    cursor: pointer;
+    font-size: rem(20);
+    background-color: inherit;
+    border: white solid rem(2);
+    color: white;
+    border-radius: rem(30);
+    transition: 0.3s;
+    &:hover {
+        border-color: $main-color-effects;
+        color: $main-color-effects;
+        transform: scale(1.1);
+    }
+}
