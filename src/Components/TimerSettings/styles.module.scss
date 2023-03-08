@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.time_button {
+    width: rem(36);
+    height: rem(36);
+    border: none;
+    border-radius: 50%;
+    font-size: rem(20);
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+        background-color: $main-color-effects;
+    }
+}
+.time_input {
+    width: rem(50);
+    margin-left: rem(20);
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-size: rem(24);
+    color: white;
+} 

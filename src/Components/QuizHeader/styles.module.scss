@@ -1,0 +1,12 @@
+@import '../../styles/mixins';
+
+.quiz {
+    &__header {
+        width: 100%;
+        &_timer {
+            width: rem(30);
+            margin: 0 auto;
+            font-size: rem(30);
+        }
+    }
+}

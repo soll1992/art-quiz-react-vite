@@ -1,0 +1,35 @@
+@import '../../styles/mixins';
+
+.volume_slider {
+    width: rem(500);
+    margin-top: rem(30);
+    &_input {
+        -webkit-appearance: none; 
+        appearance: none;
+        width: 100%; 
+        height: rem(3); 
+        background: #d3d3d3; 
+        outline: none; 
+        opacity: 0.8; 
+        -webkit-transition: .2s; 
+        transition: opacity .2s;
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: rem(16);
+            height: rem(16);
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    } 
+}
+
+@media(max-width: 700px) {
+    .volume_slider {
+        width: 70%;
+    }
+}

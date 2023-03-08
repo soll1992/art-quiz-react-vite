@@ -1,0 +1,42 @@
+@import '../../styles/mixins.scss';
+
+.main {
+    &_bg {
+        background: url('/assets/main.jpg');
+        position: fixed;
+        top: 0;
+        opacity: 0.3;
+        width: 100%;
+        min-height: 100vh;
+        z-index: -1;
+        object-fit: cover;
+    }
+    &_content {
+        padding-top: rem(30);
+    }
+}
+
+.settings_wrapper {
+    width: rem(40);
+    margin-left: auto;
+    margin-right: rem(30);
+}
+
+.logo {
+    width: rem(440);
+    height: rem(165);
+    background: url('/assets/svg/art.svg');
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-top: rem(200);
+}
+
+.quiz_buttons {
+    width: rem(400);
+    height: rem(200);
+    margin: 0 auto;
+    margin-top: rem(100);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

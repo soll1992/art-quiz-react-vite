@@ -1,0 +1,23 @@
+@import '../../styles/mixins';
+
+.card__body_img {
+    height: rem(200);
+    border-radius: rem(20);
+    opacity: 0;
+    &:global(._loaded) {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+    &:global(._grey) {
+        filter: grayscale(100%);
+    }
+    &:global(._medium) {
+        height: rem(250);
+    }
+    &:global(._big) {
+        height: rem(550);
+        @media(max-width: 360px) {
+            height: rem(400);
+        }
+    }
+}
