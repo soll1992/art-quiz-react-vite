@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import ErrorPage from '../../Pages/ErrorPage';
-import getAnswersArr from '../../utils/checkTrueAnswersCount';
-import getScoreObject from '../../utils/getScoreObj';
-import useFeatchData from '../../utils/hooks/useFeatchData';
-import pathValidation from '../../utils/pathValidation';
+import ErrorPage from 'pages/ErrorPage';
+import getAnswersArr from 'utils/checkTrueAnswersCount';
+import getScoreObject from 'utils/getScoreObj';
+import useFeatchData from 'utils/hooks/useFeatchData';
+import pathValidation from 'utils/pathValidation';
 import CategoryCard from '../CategoryCard';
 import { getTrueAnswers } from './model';
 import useGetCategories from './model/hooks/useGetCategories';

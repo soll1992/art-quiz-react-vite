@@ -1,5 +1,5 @@
 import React from 'react';
-import { TDataArr } from '../../../types';
+import { TDataArr } from 'types';
 
 export function getCategories(
   data: TDataArr,

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import useSound from 'use-sound';
-import { assetsSoundPath, VOLUME_VALUES } from '../../consts';
+import { assetsSoundPath, VOLUME_VALUES } from 'consts';
 import css from './styles.module.scss';
 
 interface IProps {

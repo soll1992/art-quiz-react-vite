@@ -1,4 +1,4 @@
-import { TDataArr } from '../types';
+import { TDataArr } from 'types';
 
 export default function shuffleArr(array: TDataArr) {
   const arrCopy = [...array];

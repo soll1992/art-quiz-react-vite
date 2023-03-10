@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AppRoutes, QuizPathes } from '../../consts';
+import { AppRoutes, QuizPathes } from 'consts';
 import SettingsButton from '../SettingsButton';
 import css from './styles.module.scss';
 

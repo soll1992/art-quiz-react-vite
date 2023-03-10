@@ -1,5 +1,5 @@
-import CategoryList from '../../Components/CategoryList';
-import Header from '../../Components/Header';
+import CategoryList from 'components/CategoryList';
+import Header from 'components/Header';
 
 export default function Categories() {
   return (

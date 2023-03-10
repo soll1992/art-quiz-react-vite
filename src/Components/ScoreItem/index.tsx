@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React, { useState } from 'react';
-import { assetsQuizPath } from '../../consts';
-import { TDataItem } from '../../types';
+import { assetsQuizPath } from 'consts';
+import { TDataItem } from 'types';
 import FullPictureModal from '../FullPictureModal';
 import LoadedImg from '../LoadedImg';
 import css from './styles.module.scss';

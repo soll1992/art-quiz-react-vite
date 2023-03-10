@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import cn from 'classnames';
+import { assetsQuizPath } from 'consts';
+import { TDataItem } from 'types';
 import css from './styles.module.scss';
-import { TDataItem } from '../../types';
-import { assetsQuizPath } from '../../consts';
 
 interface IProps {
     isVisible: boolean,

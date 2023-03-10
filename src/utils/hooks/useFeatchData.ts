@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { API_URL } from '../../consts';
-import { TDataArr } from '../../types';
+import { API_URL } from 'consts';
+import { TDataArr } from 'types';
 
 export default function useFeatchData() {
   const [quizData, setQuizData] = useState<TDataArr>([]);
@@ -13,6 +13,7 @@ export default function useFeatchData() {
       const data: TDataArr = await response.json();
       dataSetter(data);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error);
     }
   }

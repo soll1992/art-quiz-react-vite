@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { AppRoutes, assetsSvgPath, QUESTION_CATEGORI_COUNT } from '../../consts';
+import { AppRoutes, assetsSvgPath, QUESTION_CATEGORI_COUNT } from 'consts';
 import css from './styles.module.scss';
 
 interface IProps {

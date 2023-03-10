@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from '../../Pages/Home';
-import Categories from '../../Pages/Categories';
-import Quiz from '../../Pages/Quiz';
-import Settings from '../../Pages/Settings';
-import Score from '../../Pages/Score';
-import Today from '../../Pages/Today';
-import { AppRoutes } from '../../consts';
-import ErrorPage from '../../Pages/ErrorPage';
+import { AppRoutes } from 'consts';
+import Home from 'pages/Home';
+import Categories from 'pages/Categories';
+import Quiz from 'pages/Quiz';
+import Settings from 'pages/Settings';
+import Score from 'pages/Score';
+import Today from 'pages/Today';
+import ErrorPage from 'pages/ErrorPage';
 
 export default function RootRouter() {
   return (

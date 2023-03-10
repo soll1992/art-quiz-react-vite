@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DEFAULT_SETTINGS } from '../../../../consts';
+import { DEFAULT_SETTINGS } from 'consts';
 
 interface IUseSetTimerArgs {
     intervalId: React.MutableRefObject<ReturnType<typeof setInterval> | null>,

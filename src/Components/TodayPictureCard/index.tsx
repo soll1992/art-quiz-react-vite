@@ -1,10 +1,10 @@
 import { useState } from 'react';
+import { assetsQuizPath } from 'consts';
+import useFeatchData from 'utils/hooks/useFeatchData';
 import css from './styles.module.scss';
 import LoadedImg from '../LoadedImg';
-import useFeatchData from '../../utils/hooks/useFeatchData';
 import FullPictureModal from '../FullPictureModal';
 import { dayOfYear, getTodayPictureNumber } from './model';
-import { assetsQuizPath } from '../../consts';
 
 export default function TodayPictureCard() {
   const { quizData } = useFeatchData();

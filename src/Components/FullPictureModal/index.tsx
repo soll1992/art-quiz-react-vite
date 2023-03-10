@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useRef } from 'react';
-import { assetsFullSizePicPath } from '../../consts';
-import { TDataItem } from '../../types';
+import { assetsFullSizePicPath } from 'consts';
+import { TDataItem } from 'types';
 import { closeModal, modalLayoutClickHandler } from '../TodayPictureCard/model';
 import css from './styles.module.scss';
 

@@ -1,5 +1,5 @@
-import QuestionQuiz from '../../Components/QuestionQuiz';
-import Header from '../../Components/Header';
+import QuestionQuiz from 'components/QuestionQuiz';
+import Header from 'components/Header';
 
 export default function Quiz() {
   return (

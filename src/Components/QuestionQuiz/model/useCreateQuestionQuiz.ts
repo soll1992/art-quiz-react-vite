@@ -1,9 +1,9 @@
 import {
   useMemo, useRef, useState,
 } from 'react';
-import { TDataArr, TDataItem } from '../../../types';
-import useSounds from '../../../utils/hooks/useSounds';
-import shuffleArr from '../../../utils/shaffleArr';
+import { TDataArr, TDataItem } from 'types';
+import useSounds from 'utils/hooks/useSounds';
+import shuffleArr from 'utils/shaffleArr';
 
 interface IProps {
     currentQuizData: TDataArr,

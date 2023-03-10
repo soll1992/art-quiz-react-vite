@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormikProps } from 'formik';
-import { TFormik } from '../../../types';
-import { TIME_ANSWER_SETTINGS } from '../../../consts';
+import { TIME_ANSWER_SETTINGS } from 'consts';
+import { TFormik } from 'types';
 
 export function onChangeHandler(
   val: React.ChangeEvent<HTMLInputElement>,

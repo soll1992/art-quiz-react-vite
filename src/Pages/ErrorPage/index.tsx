@@ -1,4 +1,4 @@
-import { assetsSvgPath } from '../../consts';
+import { assetsSvgPath } from 'consts';
 import css from './styles.module.scss';
 
 export default function ErrorPage() {

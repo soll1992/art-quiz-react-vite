@@ -9,9 +9,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      components: '/src/components',
+      components: '/src/Components',
       consts: '/src/consts',
-      pages: '/src/pages',
+      pages: '/src/Pages',
       types: '/src/types',
       utils: '/src/utils',
     },

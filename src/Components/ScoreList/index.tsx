@@ -1,6 +1,6 @@
-import getAnswersArr from '../../utils/checkTrueAnswersCount';
-import getScoreObject from '../../utils/getScoreObj';
-import useCurrentQuizData from '../../utils/hooks/useCurrentQuizData';
+import getAnswersArr from 'utils/checkTrueAnswersCount';
+import getScoreObject from 'utils/getScoreObj';
+import useCurrentQuizData from 'utils/hooks/useCurrentQuizData';
 import ScoreItem from '../ScoreItem';
 import css from './styles.module.scss';
 
