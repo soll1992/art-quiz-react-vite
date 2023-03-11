@@ -4,7 +4,7 @@ import { TDataArr } from 'types';
 import useFeatchData from './useFeatchData';
 
 export default function useCurrentQuizData() {
-  const [currentQuizData, setCurrentQuizData] = useState<TDataArr>([]);
+  const [currentQuizData, setCurrentQuizData] = useState<TDataArr | null>(null);
 
   const { quizData, isLoading } = useFeatchData();
 

@@ -6,7 +6,7 @@ import useSounds from 'utils/hooks/useSounds';
 import shuffleArr from 'utils/shaffleArr';
 
 interface IProps {
-    currentQuizData: TDataArr,
+    currentQuizData: TDataArr | null,
     quiz?: string,
     category?: string,
     volume: number | null,
@@ -29,7 +29,7 @@ export default function useCreateQuestionQuiz({
   const { playTrue, playFalse, playResult } = useSounds(volume);
 
   function modalClickHandler() {
-    const dataLength = currentQuizData.length;
+    const dataLength = currentQuizData?.length || 0;
     if (currentQuestion < dataLength - 1) {
       setCurrentQuestion((prev) => prev + 1);
     }
@@ -37,7 +37,7 @@ export default function useCreateQuestionQuiz({
     if (intervalId.current) {
       intervalId.current = null;
     }
-    if (currentQuestion === currentQuizData.length - 1) {
+    if (currentQuizData && currentQuestion === currentQuizData.length - 1) {
       if (!mute) {
         playResult();
       }
@@ -58,11 +58,11 @@ export default function useCreateQuestionQuiz({
     }
   }
 
-  function createAnswers(data: TDataArr, currentQuestionNumber: number) {
-    const currentItem = data[currentQuestionNumber];
+  function createAnswers(data: TDataArr | null, currentQuestionNumber: number) {
+    const currentItem = data && data[currentQuestionNumber];
     setCurrentTrueAnswer(currentItem);
     const shaffledArr = shuffleArr(data)
-      .filter((item) => item.imageNum !== currentItem.imageNum)
+      .filter((item) => item.imageNum !== currentItem?.imageNum)
       .splice(0, 3);
     return currentItem ? shuffleArr([currentItem, ...shaffledArr]) : [];
   }

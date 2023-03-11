@@ -55,12 +55,12 @@ export default function QuestionQuiz() {
       <main className={css.quiz__main}>
         <div>
           {quiz === 'pictures'
-            ? `Which is ${currentQuizData[currentQuestion]?.author} picture?`
+            ? `Which is ${currentQuizData && currentQuizData[currentQuestion]?.author} picture?`
             : 'Who is the author of this picture?'}
         </div>
         {quiz === 'artist' && (
         <div className={css.quiz__main__question}>
-          {currentQuizData.length && (
+          {currentQuizData?.length && (
           <img
             className={css.quiz__main__question__image}
             src={`${assetsQuizPath}/${currentQuizData[currentQuestion]?.imageNum}.webp`}
