@@ -11,11 +11,11 @@ import css from './styles.module.scss';
 
 export default function CategoryList() {
   const { quiz } = useParams();
-  const { quizData } = useFeatchData();
+  const { quizData, isLoading } = useFeatchData();
   const userScoreObj = getScoreObject();
   const { categories } = useGetCategories(quizData);
 
-  if (pathValidation(quizData, quiz, 'quiz')) {
+  if (pathValidation(quizData, quiz, isLoading, 'quiz')) {
     return <ErrorPage />;
   }
 

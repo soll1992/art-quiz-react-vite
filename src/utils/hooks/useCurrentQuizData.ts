@@ -6,7 +6,7 @@ import useFeatchData from './useFeatchData';
 export default function useCurrentQuizData() {
   const [currentQuizData, setCurrentQuizData] = useState<TDataArr>([]);
 
-  const { quizData } = useFeatchData();
+  const { quizData, isLoading } = useFeatchData();
 
   const { quiz, category } = useParams();
 
@@ -20,6 +20,7 @@ export default function useCurrentQuizData() {
   }, [quizData]);
 
   return {
+    isLoading,
     currentQuizData,
     quiz,
     category,

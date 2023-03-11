@@ -21,6 +21,7 @@ export default function QuestionQuiz() {
     currentQuizData,
     quiz,
     category,
+    isLoading,
   } = useCurrentQuizData();
 
   const {
@@ -38,7 +39,7 @@ export default function QuestionQuiz() {
     currentQuizData, volume, quiz, category, mute,
   });
 
-  if (pathValidation(currentQuizData, category, 'category')) {
+  if (pathValidation(currentQuizData, category, isLoading, 'category')) {
     return <ErrorPage />;
   }
 
