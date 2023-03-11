@@ -1,3 +1,4 @@
+import { DEFAULT_SETTINGS } from 'consts';
 import React from 'react';
 import useSetQuizTimer from './model/hooks/useSetQuizTimer';
 import css from './styles.module.scss';
@@ -13,13 +14,15 @@ interface IProps {
 export default function QuizHeader({
   intervalId, currentQuestion, isTimer, timeToAnswer, handleTimerEnd,
 }: IProps) {
+  const { IS_TIMER } = DEFAULT_SETTINGS;
+  const timerOn = isTimer === null ? IS_TIMER : isTimer;
   const time = useSetQuizTimer({
-    intervalId, currentQuestion, isTimer, timeToAnswer, handleTimerEnd,
+    intervalId, currentQuestion, isTimer: timerOn, timeToAnswer, handleTimerEnd,
   });
 
   return (
     <header className={css.quiz__header}>
-      {isTimer && <div className={css.quiz__header_timer}>{time}</div>}
+      {timerOn && <div className={css.quiz__header_timer}>{time}</div>}
     </header>
   );
 }
