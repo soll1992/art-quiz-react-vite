@@ -1,16 +1,16 @@
 import cn from 'classnames';
-import { TSettings } from '../../types';
-import getLocalStorageVal from '../../utils/getLocalStorageVal';
+import { assetsQuizPath } from 'consts';
+import ErrorPage from 'pages/ErrorPage';
+import { TSettings } from 'types';
+import useCurrentQuizData from 'utils/hooks/useCurrentQuizData';
+import pathValidation from 'utils/pathValidation';
+import getLocalStorageVal from 'utils/getLocalStorageVal';
 import AnswerButton from '../AnswerButton';
 import QuizEndgameModal from '../QuizEndgameModal';
 import QuizHeader from '../QuizHeader';
 import QuizModal from '../QuizModal';
 import css from './styles.module.scss';
-import useCurrentQuizData from '../../utils/hooks/useCurrentQuizData';
 import useCreateQuestionQuiz from './model/useCreateQuestionQuiz';
-import { assetsQuizPath } from '../../consts';
-import pathValidation from '../../utils/pathValidation';
-import ErrorPage from '../../Pages/ErrorPage';
 
 export default function QuestionQuiz() {
   const {
@@ -21,6 +21,7 @@ export default function QuestionQuiz() {
     currentQuizData,
     quiz,
     category,
+    isLoading,
   } = useCurrentQuizData();
 
   const {
@@ -38,7 +39,7 @@ export default function QuestionQuiz() {
     currentQuizData, volume, quiz, category, mute,
   });
 
-  if (pathValidation(currentQuizData, category, 'category')) {
+  if (pathValidation(currentQuizData, category, isLoading, 'category')) {
     return <ErrorPage />;
   }
 
@@ -54,16 +55,18 @@ export default function QuestionQuiz() {
       <main className={css.quiz__main}>
         <div>
           {quiz === 'pictures'
-            ? `Which is ${currentQuizData[currentQuestion]?.author} picture?`
+            ? `Which is ${currentQuizData && currentQuizData[currentQuestion]?.author} picture?`
             : 'Who is the author of this picture?'}
         </div>
         {quiz === 'artist' && (
         <div className={css.quiz__main__question}>
-          {currentQuizData.length && <img
+          {currentQuizData?.length && (
+          <img
             className={css.quiz__main__question__image}
             src={`${assetsQuizPath}/${currentQuizData[currentQuestion]?.imageNum}.webp`}
             alt={currentQuizData[currentQuestion]?.name}
-          />}
+          />
+          )}
         </div>
         )}
         <div

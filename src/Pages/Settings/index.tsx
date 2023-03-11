@@ -1,5 +1,5 @@
-import SettingsForm from '../../Components/SettingsForm';
-import SettingsHeader from '../../Components/SettingsHeader';
+import SettingsForm from 'components/SettingsForm';
+import SettingsHeader from 'components/SettingsHeader';
 
 export default function Settings() {
   return (

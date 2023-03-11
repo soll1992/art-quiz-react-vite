@@ -1,5 +1,5 @@
 import React from 'react';
-import { TDataArr } from '../../../types';
+import { TDataArr } from 'types';
 
 export function closeModal(
   isShowSetter: (value: React.SetStateAction<boolean>) => void,

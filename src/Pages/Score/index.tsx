@@ -1,5 +1,5 @@
-import Header from '../../Components/Header';
-import ScoreList from '../../Components/ScoreList';
+import Header from 'components/Header';
+import ScoreList from 'components/ScoreList';
 
 export default function Score() {
   return (

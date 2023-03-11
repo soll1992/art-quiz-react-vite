@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
 import { useFormik } from 'formik';
-import debounce from '../../../../utils/debounce';
-import getLocalStorageVal from '../../../../utils/getLocalStorageVal';
-import { TFormik, TSettings } from '../../../../types';
+import { DEFAULT_SETTINGS } from 'consts';
+import debounce from 'utils/debounce';
+import getLocalStorageVal from 'utils/getLocalStorageVal';
+import { TFormik, TSettings } from 'types';
 import { onChangeHandler, onClickBooleanHandler, onClickTimeAnswerHandler } from '../index';
-import { DEFAULT_SETTINGS } from '../../../../consts';
 
 export default function useSettingsData() {
   const { VOLUME, TIME_TO_ANSWER, IS_TIMER } = DEFAULT_SETTINGS;

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { TDataArr } from '../../types';
+import { TDataArr } from 'types';
 import useFeatchData from './useFeatchData';
 
 export default function useCurrentQuizData() {
-  const [currentQuizData, setCurrentQuizData] = useState<TDataArr>([]);
+  const [currentQuizData, setCurrentQuizData] = useState<TDataArr | null>(null);
 
-  const { quizData } = useFeatchData();
+  const { quizData, isLoading } = useFeatchData();
 
   const { quiz, category } = useParams();
 
@@ -20,6 +20,7 @@ export default function useCurrentQuizData() {
   }, [quizData]);
 
   return {
+    isLoading,
     currentQuizData,
     quiz,
     category,

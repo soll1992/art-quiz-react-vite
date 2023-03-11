@@ -1,5 +1,6 @@
+/* eslint-disable no-param-reassign */
 import React, { useEffect, useState } from 'react';
-import { DEFAULT_SETTINGS } from '../../../../consts';
+import { DEFAULT_SETTINGS } from 'consts';
 
 interface IUseSetTimerArgs {
     intervalId: React.MutableRefObject<ReturnType<typeof setInterval> | null>,
@@ -27,12 +28,12 @@ export default function useSetQuizTimer({
   useEffect(() => () => {
     if (intervalId.current) {
       clearInterval(intervalId.current);
+      intervalId.current = null;
     }
   }, []);
 
   useEffect(() => {
     if (!intervalId.current && isTimer) {
-      // eslint-disable-next-line no-param-reassign
       intervalId.current = setInterval(() => setTime((prev) => prev - 1), 1000);
     }
     setTime(timeToAnswer || TIME_TO_ANSWER);

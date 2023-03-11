@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { assetsSvgPath } from '../../consts';
+import { assetsSvgPath } from 'consts';
 import css from './styles.module.scss';
 
 interface IProps {

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { TDataArr } from '../../types';
+import { assetsQuizPath, QUESTION_CATEGORI_COUNT } from 'consts';
+import { TDataArr } from 'types';
 import css from './styles.module.scss';
 import LoadedImg from '../LoadedImg';
 import getCurrentImg from './model';
-import { assetsQuizPath, QUESTION_CATEGORI_COUNT } from '../../consts';
 
 interface IProps {
   title: string;
