@@ -8,7 +8,7 @@ interface IProps {
 }
 
 export default function QuizEndgameModal({ isVisible, trueAnswers }: IProps) {
-  const { quiz } = useParams();
+  const { quiz, category } = useParams();
 
   return !isVisible ? null : (
     <div className={css.modal}>
@@ -28,6 +28,9 @@ export default function QuizEndgameModal({ isVisible, trueAnswers }: IProps) {
           </Link>
           <Link to={`/${quiz}`}>
             <button className={css.modal__body_button} type="button">Categories</button>
+          </Link>
+          <Link to={`/${quiz}/${category}/score`}>
+            <button className={css.modal__body_button} type="button">Score</button>
           </Link>
         </div>
       </div>
